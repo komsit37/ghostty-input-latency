@@ -105,20 +105,20 @@ Full steps in the repo README. Summary:
 by one synchronized trigger; the frame gap between the two flips is the latency
 difference. -->
 
-### Possibly related (and why this isn't a duplicate)
+### Possibly related (why not a duplicate)
 
 Issues:
-- #11651 — Progressive stuttering on Intel Mac (Metal): same hardware class, but builds up over 30+ min and needs a reboot; this is constant from the first keystroke.
-- #1409 — Input lag spike on external screen via DisplayLink Manager: tied to an external DisplayLink display, not the built-in panel tested here.
-- #1688 — Input/scroll lag with many ANSI escape sequences: a workload-specific spike, not a steady per-keystroke floor.
+- #11651 — degrades over 30+ min, needs reboot; this is constant.
+- #1409 — external DisplayLink display, not built-in.
+- #1688 — spike from heavy ANSI output, not a steady floor.
 
 Discussions:
-- #11799 — Performance degradation over time + accelerated repro: degradation over time, whereas this doesn't degrade — it's slow immediately.
-- #7333 — Slow window redraw on macOS: redraws fail to happen at all on an external display until fullscreen; here redraws happen correctly, just ~40 ms late, on the built-in in fullscreen.
-- #10013 — Input lag on external monitor, "works fine on built-in": opposite topology — here the built-in is the slow one.
-- #9943 — Significant input lag: intermittent ("for a few seconds"), no platform or repro; this is constant and quantified.
-- #7838 — High input lag + dropped keys: Linux/AMD, keys dropped, fixed by master (dup of #7720) — different OS and symptom.
-- #5113 / #4032 / #4837 — "crazy slow" / "Speed" / "Let's talk about performance": general throughput/feel threads with no controlled key→screen measurement or Alacritty baseline.
+- #11799 — degradation over time, not immediate.
+- #7333 — redraw fails entirely on external until fullscreen; here it's just late.
+- #10013 — external monitor; here the built-in is slow.
+- #9943 — intermittent, no platform/repro.
+- #7838 — Linux/AMD, dropped keys (dup of #7720).
+- #5113 / #4032 / #4837 — general "feels slow", no measurement or baseline.
 
-In short: existing reports are degradation-over-time, external-display-specific, workload-specific, non-macOS, or unmeasured. None reports a controlled, reproducible **baseline** input-latency gap vs another terminal on the built-in display.
+None reports a controlled baseline latency gap vs another terminal on the built-in display.
 ```
