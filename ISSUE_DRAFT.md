@@ -9,24 +9,22 @@
 
 ## Draft 1 — Vouch Request discussion
 
-**Category:** Vouch Request · **Title:** `Vouch request — input-latency benchmark on Intel Mac`
+**Category:** Vouch Request
 
-```markdown
-Hi! I'd like to file an Issue Triage report and need to be vouched first.
+> ⚠️ **WRITE THIS YOURSELF, IN YOUR OWN VOICE.** Ghostty's CONTRIBUTING rule #3
+> explicitly says "don't have an AI write this." The whole point of the vouch
+> system is to filter out AI-generated content — pasting AI prose here defeats it
+> and risks denouncement. So this is a **checklist of points to cover**, not text
+> to copy. Keep it concise and follow their template.
 
-Who I am: a Ghostty user on an Intel MacBook Pro. I noticed Ghostty feels laggier
-than other terminals while typing, so rather than report a vague "feels slow" I
-built a small deterministic harness to measure key→screen latency and compared
-Ghostty against Alacritty under controlled conditions.
-
-What I want to report: on my machine Ghostty shows a consistent ~40ms higher
-per-keystroke latency than Alacritty, reproducible across runs, and not explained
-by vsync, fullscreen mode, or repaint size. Full method, scripts, and result data
-are here: https://github.com/komsit37/ghostty-input-latency
-
-I'll include the harness, raw numbers, and a slow-motion video in the report.
-Happy to run any additional tests you'd find useful.
-```
+Points to cover in your own words:
+- Who you are and that you actually use Ghostty daily.
+- What you want to report: Ghostty feels laggier than other terminals when typing,
+  so you measured it instead of guessing.
+- That you built a small harness to compare key→screen latency vs Alacritty and
+  found a consistent gap, with controls.
+- Link to your repo for the method/data: https://github.com/komsit37/ghostty-input-latency
+- That you'll include a slow-mo video and are happy to run more tests.
 
 ---
 
