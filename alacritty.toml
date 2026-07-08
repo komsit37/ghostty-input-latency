@@ -1,0 +1,10 @@
+# Matched config for the latency test. Keep font + geometry identical to ghostty.conf.
+[font]
+size = 14
+
+[font.normal]
+family = "Menlo"
+
+[window.padding]
+x = 0
+y = 0

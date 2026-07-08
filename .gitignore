@@ -1,0 +1,16 @@
+# build artifact
+latency
+
+# python cache
+__pycache__/
+*.pyc
+
+# wrong-tool npm leftover (canvas text-measuring lib, unrelated to latency)
+node_modules/
+package.json
+package-lock.json
+
+# large media — host externally / attach to the issue instead
+*.mov
+*.mp4
+*.webm
